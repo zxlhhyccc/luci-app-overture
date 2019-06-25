@@ -1,0 +1,16 @@
+#!/bin/sh /etc/rc.common
+
+START=18
+
+start() {        
+        echo start
+        /usr/bin/overture-linux-mipsle -c /etc/overture/config.json -p 2 -l /var/log/overture.log >/dev/null 2>&1 &
+        # commands to launch application
+}                 
+
+stop() {          
+        echo stop
+        killall overture-linux-mipsle
+        # commands to kill application
+}
+
