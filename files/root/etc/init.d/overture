@@ -1,6 +1,6 @@
 #!/bin/sh /etc/rc.common
 
-START=18
+START=85
 
 start() {        
         echo start
