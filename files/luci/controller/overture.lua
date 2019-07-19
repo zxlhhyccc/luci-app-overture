@@ -8,4 +8,8 @@ function index()
 	entry({"admin", "services", "overture", "general"},
 		form("overture/general"),
 		_("general"), 10).leaf = true
+		
+	entry({"admin", "services", "overture", "log"},
+		form("overture/log"),
+		_("log"), 50).leaf = true
 end
