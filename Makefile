@@ -44,6 +44,10 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DATA) ./files/luci/model/cbi/overture/*.lua $(1)/usr/lib/lua/luci/model/cbi/overture/
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/root/etc/init.d/overture $(1)/etc/init.d/overture
+	$(INSTALL_DIR) $(1)/usr/share/overture
+	$(INSTALL_BIN) ./files/root/usr/share/overture/otcheck.sh $(1)/usr/share/overture/otcheck.sh
+        $(INSTALL_DIR) $(1)/etc/overture
+        $(INSTALL_CONF) ./files/root/etc/overture/config.sample.json $(1)/usr/share/overture/config.json
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
