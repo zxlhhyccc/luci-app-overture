@@ -47,7 +47,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/share/overture
 	$(INSTALL_BIN) ./files/root/usr/share/overture/otcheck.sh $(1)/usr/share/overture/otcheck.sh
         $(INSTALL_DIR) $(1)/etc/overture
-        $(INSTALL_CONF) ./files/root/etc/overture/config.sample.json $(1)/usr/share/overture/config.json
+        $(INSTALL_CONF) ./files/root/etc/overture/config.sample.json $(1)/etc/overture/config.json
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
